@@ -35,6 +35,9 @@ RUN mkdir buildroot-microchip \
     && git checkout tags/linux4microchip-2024.04-rc1 -b 2023.02-mchp \
     && cd ..
 
+RUN cd buildroot-microchip/buildroot-at91 \
+    && BR2_EXTERNAL=../buildroot-external-microchip/ make sama7g5ek_headless_defconfig
+
 # copy the buildroot configuration file
 COPY buildroot-config /buildroot-microchip/buildroot-at91/.config
 
