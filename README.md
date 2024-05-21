@@ -30,10 +30,11 @@ Run with:
 Change directory:
 `cd buildroot-microchip/buildroot-at91/`
 
-Inside the container, if you need to modify build settings do
+Inside the container, run this command:
 `make menuconfig`
+Make changes to config if necessary, otherwise, exit the menuconfig without changes.
 
-Otherwise proceed straight to building the image with
+Proceed to building the image with
 ```make -j $((`nproc` - 1))```
 
 The resulting image will be `build/sdcard.img`.

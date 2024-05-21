@@ -1,0 +1,6 @@
+config BR2_PACKAGE_EXAMPLE_STANDALONE_INFERENCING_LINUX
+    bool "Example Standalone Inferencing Linux"
+    help
+      This option enables the example standalone inferencing Linux package.
+comment "You need to copy the Edge Impulse Deployment files into"
+comment "buildroot-at91/package/example-standalone-inferencing-linux directory."
