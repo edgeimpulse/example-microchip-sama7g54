@@ -1763,7 +1763,7 @@ BR2_PACKAGE_PROVIDES_HOST_LUAINTERPRETER="host-lua"
 BR2_PACKAGE_NODEJS_ARCH_SUPPORTS=y
 BR2_PACKAGE_NODEJS=y
 BR2_PACKAGE_NODEJS_NPM=y
-BR2_PACKAGE_NODEJS_MODULES_ADDITIONAL="edge-impulse-linux async-mutex borc cbor commander express inquirer jpeg-js multer npm-registry-fetch request request-promise sharp socket.io tiny-async-pool tsee typed-emitter wavefile ws node-fetch@2"
+BR2_PACKAGE_NODEJS_MODULES_ADDITIONAL="edge-impulse-linux"
 BR2_PACKAGE_NODEJS_MODULES_ADDITIONAL_DEPS=""
 BR2_PACKAGE_NODEJS_SRC=y
 
