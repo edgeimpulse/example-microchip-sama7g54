@@ -47,9 +47,11 @@ RUN sed -i '16i NODEJS_CPU = armv7' /buildroot-microchip/buildroot-at91/package/
 # insert example-standalone-inferencing-linux in the Config.in file
 RUN sed -i 's/menu "Miscellaneous"/menu "Miscellaneous"\n	source "package\/example-standalone-inferencing-linux\/Config.in"/g' /buildroot-microchip/buildroot-at91/package/Config.in
 
-# git clone the example-standalone-inferencing-linux repository
+# git clone the example-standalone-inferencing-linux repository and switch to an exact commit
 RUN cd /buildroot-microchip/buildroot-at91/package \
-    && git clone https://github.com/edgeimpulse/example-standalone-inferencing-linux.git
+    && git clone https://github.com/edgeimpulse/example-standalone-inferencing-linux.git \
+    && cd example-standalone-inferencing-linux \
+    && git checkout ab4fa0758093a0ebb713e49462ae3c615d19bfa1
 
 # paste the files into the package
 COPY Config.in /buildroot-microchip/buildroot-at91/package/example-standalone-inferencing-linux/

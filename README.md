@@ -69,3 +69,16 @@ Go to your studio project and start collecting data!
 # Deployment
 
 # Running your Impulse
+
+# Enabling and running example-standalone-inferencing-linux
+The main route for deploying en Edge Impulse project with SAMA7G54-EK Evaluation Kit is through using .eim. However it is also possible to build
+example-standalone-inferencing-linux package and run it on the device.
+To do that run
+`make menuconfig`
+Go to Target packages -> Miscellaneous and choose Example Standalone Inferencing Linux package. Paste the project deployment files (edge-impulse-sdk, model-parameters, tflite-model)
+into buildroot-microchip/buildroot-at91/package/example-standalone-inferencing-linux folder.
+Proceed to building the image with
+```make -j $((`nproc` - 1))```
+You will be able to find `custom` application file in /home on your target. Run it with
+`./custom features.txt`,
+where features.txt is a file with raw features.
