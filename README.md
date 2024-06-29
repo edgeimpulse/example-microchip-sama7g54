@@ -62,13 +62,9 @@ Connect a webcam to the board and run `edge-impulse-linux`, and proceed to login
 
 Go to your studio project and start collecting data!
 
-# Data Collection
+# Next Steps
 
-# Model Training
-
-# Deployment
-
-# Running your Impulse
+See our [documentation for the Microchip SAMA7](https://docs.edgeimpulse.com/docs/edge-ai-hardware/cpu/microchip-sama7) for more details on using the SAMA7 with Edge Impulse and links to public projects supporting the hardware. 
 
 # Enabling and running example-standalone-inferencing-linux
 The main route for deploying en Edge Impulse project with SAMA7G54-EK Evaluation Kit is through using .eim. However it is also possible to build
