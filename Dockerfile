@@ -56,3 +56,7 @@ RUN cd /buildroot-microchip/buildroot-at91/package \
 # paste the files into the package
 COPY Config.in /buildroot-microchip/buildroot-at91/package/example-standalone-inferencing-linux/
 COPY example-standalone-inferencing-linux.mk /buildroot-microchip/buildroot-at91/package/example-standalone-inferencing-linux/
+
+# add a line to buildroot-external-microchip/board/microchip/sama5/post_build.sh
+RUN sed -i '3i cp \/buildroot-microchip\/buildroot-at91\/sharp-linux-armv7.node ${TARGET_DIR}\/usr/lib\/node_modules\/edge-impulse-linux\/node_modules\/sharp\/build\/Release\/sharp-linux-armv7.node' /buildroot-microchip/buildroot-external-microchip/board/microchip/at91/post_build.sh
+COPY sharp-linux-armv7.node /buildroot-microchip/buildroot-at91/sharp-linux-armv7.node
